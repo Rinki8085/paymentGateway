@@ -120,7 +120,7 @@ app.post("/callback", (req, res) => {
            var _results = JSON.parse(response);
              if(_results.STATUS == 'TXN_SUCCESS') {
                 console.log("^^^^^^^",_results)
-                res.redirect(`http://localhost:3000/viewOrderApi?status=${_results.STATUS}&ORDERID=${_results.ORDERID}&date=${_results.TXNDATE}&bank=${_results.BANKNAME}`)
+                res.redirect(`https://food-love.herokuapp.com/viewOrderApi?status=${_results.STATUS}&ORDERID=${_results.ORDERID}&date=${_results.TXNDATE}&bank=${_results.BANKNAME}`)
              }else {
                  res.send('payment failed')
              }
